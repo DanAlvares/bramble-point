@@ -5,6 +5,7 @@ import Header from './components/Header/Header';
 import sales from './data/sales_sample.json';
 import Dashboard from './pages/Dashboard/Dashboard';
 import SelectCashier from './pages/SelectCashier/SelectCashier';
+import Sale from './pages/Sale/Sale';
 import { CashierContextProvider } from './store/CashierContextProvider';
 
 export const STORAGE_KEY = 'SALES'
@@ -26,6 +27,7 @@ function App() {
           <Routes>
             <Route path="/" element={<SelectCashier />} />
             <Route path="/dashboard" element={<Dashboard />} />
+            <Route path="/sale" element={<Sale />} />
             <Route path="*" element={<Navigate to="/" replace />} />
           </Routes>
         </main>

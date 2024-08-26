@@ -13,7 +13,7 @@ export interface ICashier {
   name: string;
 }
 
-const SelectCashier = () => {
+const SelectCashier: React.FC = () => {
   const navigate = useNavigate();
   const { setCashier } = useContext(CashierContext);
 
@@ -24,7 +24,7 @@ const SelectCashier = () => {
 
   return (
     <div id="Cashiers">
-      <h1>Select a Cashier</h1>
+      <Typography variant="h2" sx={{ mb: 4 }} align="center">Select a Cashier</Typography>
       <section className="cashiers-list">
         {
           cashiers.map((cashier: ICashier) => (
