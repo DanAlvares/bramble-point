@@ -1,21 +1,25 @@
 
-import { Card, CardActionArea, CardContent, Avatar, Typography } from '@mui/material';
 import { Person } from '@mui/icons-material';
+import { Avatar, Card, CardActionArea, CardContent, Typography } from '@mui/material';
 import { useNavigate } from 'react-router-dom';
 
+import { useContext } from 'react';
 import cashiers from '../../data/cashier_sample.json';
+import { CashierContext } from '../../store/CashierContextProvider';
 import './SelectCashier.css';
 
-interface ICashier {
+export interface ICashier {
   id: number;
   name: string;
 }
 
 const SelectCashier = () => {
   const navigate = useNavigate();
+  const { setCashier } = useContext(CashierContext);
 
   const handleClick = (cashier: ICashier) => {
-    navigate(`/dashboard/${cashier.id}`);
+    navigate(`/dashboard`);
+    setCashier(cashier);
   }
 
   return (
