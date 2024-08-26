@@ -20,6 +20,10 @@ A simple Point-of-Sale system and dashboard built with React and TypeScript
 
 ### Setup
 
+### Code Location
+
+_Interfaces:_
+
 ### CSS
 
 ### State management
