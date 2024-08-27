@@ -49,7 +49,7 @@ const Dashboard: React.FC = () => {
       </Box>
       <Box sx={{ display: 'flex', justifyContent: 'space-between', mt: 3 }}>
         <Button component={Link} to='/' color="primary" >Switch Cashier</Button>
-        <Button component={Link} to='/sale' variant="contained" color="primary" >Add a sale</Button>
+        <Button component={Link} to='/sale' variant="contained" color="primary" data-test-id="add-sale">Add a sale</Button>
       </Box>
     </div>
   );

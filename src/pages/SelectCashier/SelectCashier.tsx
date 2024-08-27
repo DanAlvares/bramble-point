@@ -29,7 +29,7 @@ const SelectCashier: React.FC = () => {
         {
           cashiers.map((cashier: ICashier) => (
             <Card key={cashier.id} sx={{ width: '100%', maxWidth: 375, margin: 2 }}>
-              <CardActionArea onClick={() => handleClick(cashier)}>
+              <CardActionArea data-test-id={`cashier-` + cashier.id} onClick={() => handleClick(cashier)}>
                 <CardContent>
                   <Typography display='flex' variant="h5" component="div">
                     <Avatar sx={{ marginRight: 2 }}>

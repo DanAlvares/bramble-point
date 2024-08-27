@@ -18,7 +18,7 @@ const Header = () => {
           <Avatar sx={{ marginRight: 2 }}>
             <Person />
           </Avatar>
-          <strong>{cashier.name}</strong>
+          <strong data-test-id="casher-name">{cashier.name}</strong>
         </>)}
       </Toolbar>
     </AppBar>

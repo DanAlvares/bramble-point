@@ -98,6 +98,7 @@ const Sale: React.FC = () => {
         <FormControl fullWidth>
           <InputLabel id="demo-simple-select-label">Select a product to add</InputLabel>
           <Select
+            data-test-id="select-product"
             labelId="demo-simple-select-label"
             id="demo-simple-select"
             value={newProduct}
@@ -105,11 +106,11 @@ const Sale: React.FC = () => {
             onChange={(event: SelectChangeEvent<any>) => setNewProduct(event.target.value)}
           >
             {products.map((product: IProduct) => (
-              <MenuItem disabled={isDisabled(product)} key={product.sku} value={product.sku} >{product.name}</MenuItem>
+              <MenuItem data-test-id={product.sku} disabled={isDisabled(product)} key={product.sku} value={product.sku} >{product.name}</MenuItem>
             ))}
           </Select>
         </FormControl>
-        <Button sx={{ width: 250 }} onClick={addItem} size="large" variant="outlined" startIcon={<AddIcon />}>Add item</Button>
+        <Button sx={{ width: 250 }} data-test-id="add-item" onClick={addItem} size="large" variant="outlined" startIcon={<AddIcon />}>Add item</Button>
       </Box>
 
 
@@ -139,6 +140,7 @@ const Sale: React.FC = () => {
                     onChange={(e) => handleQuantityChange(index, parseInt(e.target.value) || 0)}
                     InputProps={{ inputProps: { min: 0 } }}
                     variant="outlined"
+                    data-test-id="quantity"
                     size="small"
                     sx={{ width: 90 }}
                   />
@@ -165,7 +167,7 @@ const Sale: React.FC = () => {
 
       <Box sx={{ display: 'flex', justifyContent: 'space-between', mt: 3 }}>
         <Button component={Link} to='/' color="primary" >Switch Cashier</Button>
-        <Button disabled={!items.length} onClick={submitSale} variant="contained" size="large">Submit</Button>
+        <Button disabled={!items.length} onClick={submitSale} variant="contained" size="large" data-test-id="submit-sale">Submit</Button>
       </Box>
     </Container>
   );
