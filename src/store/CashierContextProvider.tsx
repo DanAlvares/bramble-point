@@ -22,7 +22,7 @@ export const CashierContextProvider: React.FC<{ children: React.ReactNode }> = (
     if (!cashier.id) {
       navigate('/');
     }
-  }, [])
+  }, [cashier.id, navigate])
 
   const setCashier = (cashier: ICashier) => {
     setRawData(cashier)
