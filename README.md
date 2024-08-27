@@ -17,6 +17,7 @@ A simple Point-of-Sale system and dashboard built with React and TypeScript
   - [CSS](#css)
   - [State management](#state-management)
   - [Semantics & Accessibility](#semantics--accessibility)
+  - [Workflow and CI/CD](#workflow)
   - [Conventional Commits](#conventional-commits)
 - [Conclusion](#next-steps)
 
@@ -79,6 +80,10 @@ The only state I managed was the currently selected Cashier, for which I used th
 ### Semantics & Accessibility
 
 I typically have a strong focus on meaningful (semantic) markup which covers a significant portion of making the web accessibly. I feel that MUI does make that more difficult, given that _most_ of what it renders out is `divs`, but it does, of course, depend on the project
+
+### Workflow
+
+I haven't used any git flow, but, as well as automating the unit tests, I have set up Continuous Deployment with Netlify, so the app is released when the code is pushed or merged to master. https://bramble-point.netlify.app/
 
 ### Conventional Commits
 
