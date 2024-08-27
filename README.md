@@ -4,9 +4,25 @@
 
 A simple Point-of-Sale system and dashboard built with React and TypeScript
 
-[See it in action](https://bramble-point.netlify.app/)
+[See it in action](https://bramble-point.netlify.app/) 🚀
 
-## Setup
+## Table of Contents
+
+- [Getting Started](#getting-started)
+  - [Installation](#installation)
+  - [Basic Usage](#running-the-app)
+- [Approach](#features)
+  - [Boilerplate](#boilerplate)
+  - [Folder structure](#folder-structure)
+  - [CSS](#css)
+  - [State management](#state-management)
+  - [Semantics & Accessibility](#semantics--accessibility)
+  - [Conventional Commits](#conventional-commits)
+- [Conclusion](#next-steps)
+
+## Getting Started
+
+### Installation
 
 ```
 git clone https://github.com/DanAlvares/bramble-point.git
@@ -14,7 +30,7 @@ cd bramble-point
 npm i
 ```
 
-## Running the app
+### Running the app
 
 To serve the app at `http://localhost:3000`
 
@@ -22,15 +38,15 @@ To serve the app at `http://localhost:3000`
 npm start
 ```
 
-## Unit tests
+### Running the Unit tests
 
 ```
 npm test
 ```
 
-Used React Testing Library, with the compatible Jest syntax.
+Used React Testing Library, with the compatible Jest syntax. Admittedly, coverage is quite low as I ran out of time.
 
-## E2E tests
+### Running the E2E tests
 
 ```
 npm run e2e
@@ -44,7 +60,7 @@ I have used Cypress for a very simple e2e test suite using `cypress-cucumber` an
 
 Given the timeframe and size of the project, I have used Create-React-App to spin up a new app for simplicity.
 
-### Code Location
+### Folder structure
 
 - **Interfaces:** reside with the component for which they are associated. I like to "program for deletability". More generic interfaces might be moved into their own files
 - **Components:** I have made a separation between types of components. Page/Route components are in the `pages` folder, and smaller components are in the components
@@ -70,7 +86,7 @@ I always strive to keep a clean git history and I find conventional commits do a
 
 ## Next Steps
 
-There are many improvements that can clearly be made here, but I ran out of time:
+There are many improvements that can clearly be made to the current code, but I exceeded the timebox:
 
 - Unit test coverage
 - E2E test coverage

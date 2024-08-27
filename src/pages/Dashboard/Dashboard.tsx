@@ -32,7 +32,6 @@ const Dashboard: React.FC = () => {
     return acc;
   }, {}));
 
-
   return (
     <div id="Dashboard">
       <Typography sx={{ mb: 4 }} variant="h2" align="center">Cashier Sales Statistics</Typography>

@@ -14,7 +14,7 @@ const initialState: IState = {
 
 export const CashierContext = createContext(initialState)
 
-export const CashierContextProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+export const CashierContextProvider: React.FC<{ children?: React.ReactNode }> = ({ children }) => {
   const [cashier, setRawData] = useState<ICashier>(initialState.cashier);
   const navigate = useNavigate();
 

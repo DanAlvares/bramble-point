@@ -1,14 +1,9 @@
 import { render, screen } from '@testing-library/react';
-import Header from './Header';
+import App from './App';
 
-jest.mock('react-router-dom', () => ({
-  ...jest.requireActual('react-router-dom'),
-  useLocation: () => jest.fn()
-}));
-
-describe('Header component', () => {
+describe('App component', () => {
   it('should render the title', () => {
-    render(<Header />);
+    render(<App />);
     const titleElement = screen.getByText(/bramble point/i);
     expect(titleElement).toBeInTheDocument();
   });
